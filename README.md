@@ -13,20 +13,16 @@ RippleNet is a deep end-to-end model that naturally incorporates the knowledge g
 Ripple Network overcomes the limitations of existing embedding-based and path-based KG-aware recommendation methods by introducing preference propagation, which automatically propagates users' potential preferences and explores their hierarchical interests in the KG.
 
 
-
 ### Files in the folder
 
 - `data/`
-  - `book/`
-    - `BX-Book-Ratings.csv`: raw rating file of Book-Crossing dataset;
-    - `item_index2entity_id.txt`: the mapping from item indices in the raw rating file to entity IDs in the KG;
-    - `kg.txt`: knowledge graph file;
   - `movie/`
     - `item_index2entity_id.txt`: the mapping from item indices in the raw rating file to entity IDs in the KG;
     - `kg_part1.txt` and `kg_part2.txt`: knowledge graph file;
     - `ratrings.dat`: raw rating file of MovieLens-1M;
+  - `model/`
+    - `ripplenet.pt`: model trained and saved;
 - `src/`: implementations of RippleNet.
-
 
 
 ### Required packages
@@ -34,11 +30,14 @@ The code has been tested running under Python 3.6, with the following packages i
 - pytorch >= 1.0
 - numpy >= 1.14.5
 - sklearn >= 0.19.1
+- pyqt5 >= 5.15.0
 
 
 ### Running the code
-```
+```shell
 $ cd src
-$ python preprocess.py --dataset movie (or --dataset book)
-$ python main.py --dataset movie (note: use -h to check optional arguments)
+$ python preprocess.py
+$ python main.py
+$ python use.py
 ```
+
