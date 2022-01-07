@@ -2,8 +2,6 @@ import argparse
 import numpy as np
 from data_loader import load_data
 from train import train
-from predict import predict
-
 
 np.random.seed(555)  # 随机种子
 
@@ -30,5 +28,4 @@ args = parser.parse_args()
 show_loss = False  # 训练中是否输出详细loss
 data_info = load_data(args)  # 加载相关数据集
 
-# train(args, data_info, show_loss)
-predict(args, data_info, usr=133)
+train(args, data_info, show_loss)
