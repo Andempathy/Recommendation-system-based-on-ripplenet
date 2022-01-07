@@ -5,7 +5,7 @@ import os
 from model import RippleNet
 
 
-def predict(args, data_info, usr):
+def predict(args, data_info, usr=None):
     n_entity = data_info[3]
     n_relation = data_info[4]
     ripple_set = data_info[5]

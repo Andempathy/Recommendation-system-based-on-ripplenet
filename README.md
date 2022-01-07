@@ -137,6 +137,7 @@ MovieID::Title::Genres
   - `model/`
     - `ripplenet.pt`: model trained and saved;
 - `src/`
+  - `preprocess.py`: preprocess the info and data in the file;
   - `data_loader.py`: load data from the file preprocessed;
   - `model.py`: model itself;
   - `train.py`: train;
@@ -171,6 +172,8 @@ $ python demo.py
 >If you will use the recommended system in the console, execute `$ Python use py`; 
 >
 >If you will use it in a demo system based on PyQt5, execute `$ Python demo py`.
+>
+>If you want to successfully login the demo system, please input username and password in /data/movie/user2id.txt, such as: wanduan 123
 
 
 ---
